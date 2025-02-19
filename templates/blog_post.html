@@ -7,11 +7,12 @@
 </head>
 <body>
     <div class="blog-post-container">
-        <h1>{{ post['title'] }}</h1>
-        <p class="author-date">By {{ post['author'] }} on {{ post['date'] }}</p>
-        <div class="blog-content">
-            {{ post['content'] }}
+        <h1 class="blog-post-title">{{ post.title }}</h1>
+        <p class="blog-post-meta">By <span class="blog-post-author">{{ post.author }}</span> on <span class="blog-post-date">{{ post.date }}</span></p>
+        <div class="blog-post-content">
+            {{ post.content }}
         </div>
+        <a href="{{ url_for('blogs') }}" class="back-to-blogs">Back to Blogs</a>
     </div>
 </body>
 </html>
