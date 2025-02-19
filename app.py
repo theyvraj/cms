@@ -151,4 +151,4 @@ def blog_post(post_id):
     return render_template('blog_post.html', post=post)
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host='192.168.211.5',debug=True)
