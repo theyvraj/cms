@@ -4,7 +4,7 @@ import os
 import subprocess
 
 app = Flask(__name__)
-app.secret_key = os.urandom(40)  # Replace with a secure key
+app.secret_key = os.urandom(40)  
 def is_database_initialized():
     try:
         conn = sqlite3.connect('blog.db')
