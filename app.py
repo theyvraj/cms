@@ -2,10 +2,8 @@ from flask import Flask, render_template, request, redirect, url_for, session, f
 import sqlite3
 import os
 import subprocess
-from flask_ckeditor import CKEditor
 
 app = Flask(__name__)
-ckeditor = CKEditor(app)
 app.secret_key = os.urandom(40)  
 def is_database_initialized():
     try:
@@ -99,7 +97,7 @@ def filter_posts():
     filter_author = request.form.get('filter_author', '')
     conn = get_db_connection()
     if filter_author:
-        posts = conn.execute('SELECT * FROM posts WHERE author  ?LIKE', ('%' + filter_author + '%',)).fetchall()
+        posts = conn.execute('SELECT * FROM posts WHERE author LIKE ?', ('%' + filter_author + '%',)).fetchall()
     else:
         posts = conn.execute('SELECT * FROM posts').fetchall()
     conn.close()
