@@ -134,5 +134,12 @@ def logout():
     session.pop('logged_in', None)
     return redirect(url_for('login'))
 
+@app.route('/blogs')
+def blogs():
+    conn = get_db_connection()
+    posts = conn.execute('SELECT title, content, author, date FROM posts').fetchall()
+    conn.close()
+    return render_template('blogs.html', posts=posts)
+
 if __name__ == '__main__':
     app.run(debug=True)
