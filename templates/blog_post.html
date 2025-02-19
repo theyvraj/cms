@@ -1,0 +1,17 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ post.title }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="blog-post-container">
+        <h1>{{ post['title'] }}</h1>
+        <p class="author-date">By {{ post['author'] }} on {{ post['date'] }}</p>
+        <div class="blog-content">
+            {{ post['content'] }}
+        </div>
+    </div>
+</body>
+</html>

@@ -137,9 +137,18 @@ def logout():
 @app.route('/blogs')
 def blogs():
     conn = get_db_connection()
-    posts = conn.execute('SELECT title, content, author, date FROM posts').fetchall()
+    posts = conn.execute('SELECT post_id, title, content, author, date FROM posts').fetchall()
     conn.close()
     return render_template('blogs.html', posts=posts)
+
+@app.route('/blog_post/<int:post_id>')
+def blog_post(post_id):
+    conn = get_db_connection()
+    post = conn.execute('SELECT * FROM posts WHERE post_id = ?', (post_id,)).fetchone()
+    conn.close()
+    if post is None:
+        return "Post not found", 404
+    return render_template('blog_post.html', post=post)
 
 if __name__ == '__main__':
     app.run(debug=True)

@@ -10,9 +10,9 @@
     <div class="blog-container">
         {% for post in posts %}
         <div class="blog-post">
-            <h2>{{ post.title }}</h2>
-            <p>{{ post.content | truncate(200) }}</p>
-            <p class="author-date">By {{ post.author }} on {{ post.date }}</p>
+            <h2><a href="{{ url_for('blog_post', post_id=post['post_id']) }}">{{ post['title'] }}</a></h2>
+            <p>{{ post['content'] | truncate(200) }}</p>
+            <p class="author-date">By {{ post['author'] }} on {{ post['date'] }}</p>
         </div>
         {% endfor %}
     </div>

@@ -185,12 +185,37 @@ button:hover {
 }
 
 .blog-post {
-    border: 1px solid #ccc;
-    padding: 10px;
-    border-radius: 5px;
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.blog-post:hover {
+    transform: translateY(-5px);
+}
+
+.blog-post h2 {
+    margin-top: 0;
+    color: #3498db;
+}
+
+.blog-post h2 a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.blog-post h2 a:hover {
+    text-decoration: underline;
+}
+
+.blog-post p {
+    margin-bottom: 10px;
 }
 
 .author-date {
     font-size: 0.9em;
-    color: #777;
+    color: #7f8c8d;
+    text-align: right;
 }
