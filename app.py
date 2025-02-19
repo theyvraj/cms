@@ -70,7 +70,7 @@ def filter_posts():
     filter_author = request.form.get('filter_author', '')
     conn = get_db_connection()
     if filter_author:
-        posts = conn.execute('SELECT * FROM posts WHERE author LIKE ?', ('%' + filter_author + '%',)).fetchall()
+        posts = conn.execute('SELECT * FROM posts WHERE author  ?LIKE', ('%' + filter_author + '%',)).fetchall()
     else:
         posts = conn.execute('SELECT * FROM posts').fetchall()
     conn.close()
