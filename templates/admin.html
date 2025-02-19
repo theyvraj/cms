@@ -27,6 +27,7 @@
                         <th>Title</th>
                         <th>Author</th>
                         <th>Date</th>
+                        <th>Action</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -36,6 +37,7 @@
                         <td>{{ post.title }}</td>
                         <td>{{ post.author }}</td>
                         <td>{{ post.date }}</td>
+                        <td><a href="{{ url_for('view_edit_post', post_id=post.post_id) }}" class="btn btn-view">View Content</a></td>
                     </tr>
                     {% endfor %}
                 </tbody>

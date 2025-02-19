@@ -61,6 +61,33 @@ def admin():
     conn.close()
     return render_template('admin.html', posts=posts)
 
+@app.route('/view_edit_post/<int:post_id>', methods=['GET', 'POST'])
+def view_edit_post(post_id):
+    if not session.get('logged_in'):
+        return redirect(url_for('login'))
+
+    conn = get_db_connection()
+    
+    if request.method == 'POST':
+        title = request.form['title']
+        content = request.form['content']
+        author = request.form['author']
+        date = request.form['date']
+        
+        conn.execute('UPDATE posts SET title = ?, content = ?, author = ?, date = ? WHERE post_id = ?',
+                     (title, content, author, date, post_id))
+        conn.commit()
+        flash('Post updated successfully!')
+        return redirect(url_for('admin'))
+    
+    post = conn.execute('SELECT * FROM posts WHERE post_id = ?', (post_id,)).fetchone()
+    conn.close()
+    
+    if post is None:
+        flash('Post not found!')
+        return redirect(url_for('admin'))
+    
+    return render_template('view_edit_post.html', post=post)
 
 @app.route('/filter', methods=['POST'])
 def filter_posts():

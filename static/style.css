@@ -266,3 +266,27 @@ button:hover {
 .back-to-blogs:hover {
     background-color: #2980b9;
 }
+.btn-view {
+    background-color: #4CAF50;
+    color: white;
+    padding: 8px 12px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.btn-view:hover {
+    background-color: #45a049;
+}
+
+.btn-save {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.btn-cancel {
+    background-color: #f44336;
+    color: white;
+}
