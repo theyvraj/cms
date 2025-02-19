@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Blog Posts</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Blog Posts</h1>
+        <div class="filter-container">
+            <form method="post" action="{{ url_for('filter_posts') }}" class="filter-form">
+                <input type="text" name="filter_author" placeholder="Filter by author" value="{{ filter_author if filter_author else '' }}">
+                <button type="submit" class="btn btn-filter">Filter</button>
+                {% if filter_author %}
+                    <a href="{{ url_for('admin') }}" class="btn btn-clear">Clear Filter</a>
+                {% endif %}
+            </form>
+        </div>
+        <form method="post" action="{{ url_for('delete_posts') }}" class="admin-form">
+            <table class="admin-table">
+                <thead>
+                    <tr>
+                        <th>Select</th>
+                        <th>Post ID</th>
+                        <th>Title</th>
+                        <th>Author</th>
+                        <th>Date</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for post in posts %}
+                    <tr>
+                        <td><input type="checkbox" name="post_ids" value="{{ post.post_id }}"></td>
+                        <td>{{ post.post_id }}</td>
+                        <td>{{ post.title }}</td>
+                        <td>{{ post.author }}</td>
+                        <td>{{ post.date }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            <div class="button-container">
+                <a href="{{ url_for('create') }}" class="btn btn-create">Create New Post</a>
+                <a href="{{ url_for('logout') }}" class="btn btn-logout">Logout</a>
+                <button type="submit" class="btn btn-delete">Delete Selected Posts</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

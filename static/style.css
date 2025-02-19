@@ -1,0 +1,179 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+.post {
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="date"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+.admin-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.admin-table th,
+.admin-table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+.admin-table th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+.admin-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.admin-table tr:hover {
+    background-color: #f5f5f5;
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+    white-space: nowrap;
+}
+
+.btn-create {
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+}
+
+.btn-create:hover {
+    background-color: #367c39;
+}
+
+.btn-delete {
+    background-color: #f44336;
+    color: white;
+}
+
+.btn-delete:hover {
+    background-color: #ac2626;
+}
+
+.btn-logout {
+    background-color: #62256e;
+    color: white;
+    text-decoration: none;
+}
+
+.btn-logout:hover {
+    background-color: #391541;
+}
+
+
+.admin-form {
+    margin-top: 20px;
+}
+
+.filter-container {
+    margin-bottom: 20px;
+  }
+  
+.filter-form {
+    display: flex;
+    align-items: center;
+  }
+  
+.filter-form input[type="text"] {
+    flex-grow: 1;
+    margin-right: 10px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+  
+.btn-filter {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 3px;
+  }
+  
+.btn-filter:hover {
+    background-color: #45a049;
+  }
+  
+.btn-clear {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 3px;
+    text-decoration: none;
+    margin-left: 12px;
+    white-space: nowrap;
+  }
+  
+.btn-clear:hover {
+    background-color: #d32f2f;
+  }
