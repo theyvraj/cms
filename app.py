@@ -2,8 +2,10 @@ from flask import Flask, render_template, request, redirect, url_for, session, f
 import sqlite3
 import os
 import subprocess
+from flask_ckeditor import CKEditor
 
 app = Flask(__name__)
+ckeditor = CKEditor(app)
 app.secret_key = os.urandom(40)  
 def is_database_initialized():
     try:
