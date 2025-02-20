@@ -37,16 +37,28 @@
         <h1>Welcome to Blicky!</h1>
         <p class="lead">Blicky is a powerful tool for managing your website's content directly through the backend data. Simplify your website management with ease and speed!</p>
     </div>
-    <div class="container mt-5 text-light">
+    <div class="container-fluid mt-5 text-light">
         <div class="row">
-            <!-- Left-aligned "What I do?" container -->
-            <div class="col-md-6">
-                <h2>What I do?</h2>
-                <p class="lead">We do nothing.</p>
+            <div class="col-md-6 d-flex flex-column align-items-center">
+                <img src="{{ url_for('static', filename='img_01.webp') }}" class="w-75 img-fluid rounded" style="max-height: 300px; object-fit: cover;">
+                <h2>What is Blicky?</h2>
+                <div class="text-start w-75" style="text-align: justify;">
+                    <p>Blicky is a powerful backend-based content management system (CMS) designed to streamline content organization, editing, and publishing. It allows developers and content teams to manage website or app content dynamically without interfering with the frontend structure. Manage product descriptions, pricing, and promotions dynamically. Schedule and update articles without frontend modifications. Keep company profiles, events, and announcements updated. Deliver backend-driven content updates without app releases.</p>
+                </div>
             </div>
-            <div class="col-md-6 text-end">
-                <h2>What we do?</h2>
-                <p class="lead">We do nothing.</p>
+            <div class="col-md-6 d-flex flex-column align-items-center">
+                <img src="{{ url_for('static', filename='img_02.webp') }}" class="w-75 img-fluid rounded" style="max-height: 300px; object-fit: cover;">
+                <h2>Key Features</h2>
+                <div class="text-start w-75">
+                    <ul>
+                        <li>API-First Approach: Integrates seamlessly with front-end frameworks via REST or GraphQL APIs.</li>
+                        <li>Role-Based Access Control: Manage permissions for admins, editors, and contributors.</li>
+                        <li>Real-Time Collaboration: Multiple users can edit content with version tracking.</li>
+                        <li>Automated Publishing & Scheduling: Set publish dates and automate content workflows.</li>
+                        <li>Media Library: Upload, store, and optimize images and videos for web use.</li>
+                        <li>SEO Optimization Tools: Built-in metadata fields and keyword recommendations.</li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
