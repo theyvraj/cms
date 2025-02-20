@@ -53,10 +53,17 @@ def signup():
 
     return render_template('signup.html')
 
+@app.route('/')
+def homepage():
+    return render_template('homepage.html')
 
+@app.route('/about')
+def about():
+    return render_template('about.html')
 
-
-
+@app.route('/contact')
+def contact():
+    return render_template('contact.html')
 
 @app.route('/admin')
 def admin():
