@@ -1,11 +1,12 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: linear-gradient(#380036,#0CBABA);
-    color: #333;
-    margin: 0;
-    padding: 0;
+body{
+    background-image:linear-gradient(to right,#000000,#4D4855) ;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    font-size: 20px;
+    border-radius: 10px;
+    transition: background-color 0.3s ease-out;
 }
-
 .container {
     width: 80%;
     margin: 0 auto;
@@ -14,7 +15,6 @@ body {
 
 h1 {
     text-align: center;
-    color: #333;
 }
 
 .post {
@@ -185,8 +185,8 @@ button:hover {
 }
 
 .blog-post {
-    background-color: #fff;
     border-radius: 8px;
+    text-align: left;
     padding: 20px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     transition: transform 0.3s ease;
@@ -198,7 +198,8 @@ button:hover {
 
 .blog-post h2 {
     margin-top: 0;
-    color: #3498db;
+    color: #ffffff;
+    text-decoration: underline;
 }
 
 .blog-post h2 a {
@@ -220,7 +221,6 @@ button:hover {
     text-align: right;
 }
 .blog-post-container {
-    background-color: #fff;
     border-radius: 8px;
     padding: 30px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
@@ -228,7 +228,7 @@ button:hover {
 }
 
 .blog-post-title {
-    color: #2c3e50;
+    color: #ffffff;
     font-size: 2.5em;
     margin-bottom: 10px;
 }
@@ -289,4 +289,9 @@ button:hover {
 .btn-cancel {
     background-color: #f44336;
     color: white;
+}
+@media (max-width: 991.98px) {
+    .navbar-nav .nav-item.active .nav-link {
+        color: #f8f9fa !important;
+    }
 }

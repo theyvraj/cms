@@ -4,18 +4,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ post.title }}</title>
     <link rel="icon" href="{{ url_for('static', filename='writing.ico') }}" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand text-light" href="#">Blicky</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="{{ url_for('homepage') }}">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="{{ url_for('about') }}">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="{{ url_for('contact') }}">Contact Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="{{ url_for('blogs') }}">Blogs</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
     <div class="blog-post-container">
         <h1 class="blog-post-title">{{ post.title }}</h1>
         <p class="blog-post-meta">By <span class="blog-post-author">{{ post.author }}</span> on <span class="blog-post-date">{{ post.date }}</span></p>
         <div class="blog-post-content">
             {{ post.content }}
         </div>
-        <a href="{{ url_for('blogs') }}" class="back-to-blogs"><button>Back to Blogs</button></a>
+        <a href="{{ url_for('blogs') }}"><button>Back to Blogs</button></a>
     </div>
-    <footer class="bg-light py-3 mt-5">
+    <footer class="py-3 mt-5">
         <div class="container text-center">
             <p>&copy; 2025 Blicky. All rights reserved.</p>
         </div>
