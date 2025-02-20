@@ -7,8 +7,6 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-
-    <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">Blicky</a>
@@ -18,42 +16,30 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link active" href="homepage.html">Home</a>
+                        <a class="nav-link active" href="{{ url_for('homepage') }}">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="about.html">About</a>
+                        <a class="nav-link" href="{{ url_for('about') }}">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="contact.html">Contact Us</a>
+                        <a class="nav-link" href="{{ url_for('contact') }}">Contact Us</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Blogs</a>
+                        <a class="nav-link" href="{{ url_for('blogs') }}">Blogs</a>
                     </li>
                 </ul>
             </div>
         </div>
-    </nav>
-
-    <!-- Main content -->
+    </nav>->
     <div class="container mt-5">
-        <h1>Welcome to Blicky</h1>
+        <h1>Welcome to Blicky!</h1>
         <p class="lead">Blicky is a powerful tool for managing your website's content directly through the backend data. Simplify your website management with ease and speed!</p>
-        
-        <h2>Features</h2>
-        <ul>
-            <li>Manage your content seamlessly.</li>
-            <li>Easy integration with your website's backend.</li>
-            <li>Real-time content updates and revisions.</li>
-            <li>Intuitive user interface.</li>
-        </ul>
     </div>
-
     <footer class="bg-light py-3 mt-5">
-        <div class="container text-center">
-            <p>&copy; 2025 Blicky. All rights reserved.</p>
+        <div class="container-fluid">
+            <p>&copy; 2021 Blicky. All rights reserved.</p>
         </div>
     </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
 </body>
 </html>
