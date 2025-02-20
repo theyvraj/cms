@@ -54,6 +54,10 @@ def signup():
     return render_template('signup.html')
 
 
+
+
+
+
 @app.route('/admin')
 def admin():
     conn = get_db_connection()
@@ -103,7 +107,7 @@ def filter_posts():
     conn.close()
     return render_template('admin.html', posts=posts, filter_author=filter_author)
 
-@app.route('/', methods=('GET', 'POST'))
+@app.route('/login', methods=('GET', 'POST'))
 def login():
     if request.method == 'POST':
         username = request.form['username']
