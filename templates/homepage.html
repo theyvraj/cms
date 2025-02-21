@@ -18,7 +18,7 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item active">
-                        <a class="nav-link text-warning" href="{{ url_for('homepage') }}">Home</a>
+                        <a class="nav-link text-success" href="{{ url_for('homepage') }}">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link text-light" href="{{ url_for('about') }}">About</a>
@@ -38,15 +38,15 @@
         <p class="lead">Blicky is a powerful tool for managing your website's content directly through the backend data. Simplify your website management with ease and speed!</p>
     </div>
     <div class="container-fluid mt-5 text-light">
-        <div class="row">
-            <div class="col-md-6 d-flex flex-column align-items-center">
+        <div class="row justify-content-evenly">
+            <div class="col d-flex flex-column align-items-center">
                 <img src="{{ url_for('static', filename='img_01.webp') }}" class="w-75 img-fluid rounded" style="max-height: 300px; object-fit: cover;">
                 <h2>What is Blicky?</h2>
-                <div class="text-start w-75" style="text-align: justify;">
+                <div class="text-start w-75">
                     <p>Blicky is a powerful backend-based content management system (CMS) designed to streamline content organization, editing, and publishing. It allows developers and content teams to manage website or app content dynamically without interfering with the frontend structure. Manage product descriptions, pricing, and promotions dynamically. Schedule and update articles without frontend modifications. Keep company profiles, events, and announcements updated. Deliver backend-driven content updates without app releases.</p>
                 </div>
             </div>
-            <div class="col-md-6 d-flex flex-column align-items-center">
+            <div class="col d-flex flex-column align-items-center">
                 <img src="{{ url_for('static', filename='img_02.webp') }}" class="w-75 img-fluid rounded" style="max-height: 300px; object-fit: cover;">
                 <h2>Key Features</h2>
                 <div class="text-start w-75">
