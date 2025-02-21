@@ -1,6 +1,5 @@
 body{
     background-image:linear-gradient(to left,#28313B,#485461) ;
-    color: #fff;
     padding: 10px;
     text-align: center;
     font-size: 20px;
@@ -295,3 +294,4 @@ button:hover {
         color: #f8f9fa !important;
     }
 }
+
