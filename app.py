@@ -188,5 +188,13 @@ def blog_post(post_id):
         return "Post not found", 404
     return render_template('blog_post.html', post=post)
 
+@app.route('/privacy-policy')
+def privacy_policy():
+    return render_template('privacy_policy.html')
+
+@app.route('/terms-of-service')
+def terms_of_service():
+    return render_template('terms_of_service.html')
+
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host='192.168.211.5',debug=True)
