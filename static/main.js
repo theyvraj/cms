@@ -10,16 +10,16 @@ document.addEventListener('DOMContentLoaded', function() {
             <div class="collapse navbar-collapse fw-bold" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item active">
-                        <a class="nav-link text-dark" href="${window.location.origin}">Home</a>
+                        <a class="nav-link text-dark" href="/">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-light" href="${window.location.origin}/about">About</a>
+                        <a class="nav-link text-light" href="/about">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-light" href="${window.location.origin}/contact">Contact Us</a>
+                        <a class="nav-link text-light" href="/contact">Contact Us</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-light" href="${window.location.origin}/blogs">Blogs</a>
+                        <a class="nav-link text-light" href="/blogs">Blogs</a>
                     </li>
                 </ul>
             </div>
@@ -35,17 +35,17 @@ document.addEventListener('DOMContentLoaded', function() {
                 <div class="col-md-4">
                     <h5>Quick Links</h5>
                     <ul class="list-unstyled">
-                        <li><a href="${window.location.origin}/" class="text-light">Home</a></li>
-                        <li><a href="${window.location.origin}/about" class="text-light">About Us</a></li>
-                        <li><a href="${window.location.origin}/contact" class="text-light">Contact Us</a></li>
-                        <li><a href="${window.location.origin}/blogs" class="text-light">Blogs</a></li>
+                        <li><a href="/" class="text-light">Home</a></li>
+                        <li><a href="/about" class="text-light">About Us</a></li>
+                        <li><a href="/contact" class="text-light">Contact Us</a></li>
+                        <li><a href="/blogs" class="text-light">Blogs</a></li>
                     </ul>
                 </div>
                 <div class="col-md-4">
                     <h5>Legal</h5>
                     <ul class="list-unstyled">
-                        <li><a href="${window.location.origin}/privacy-policy" class="text-light">Privacy Policy</a></li>
-                        <li><a href="${window.location.origin}/terms-of-service" class="text-light">Terms of Service</a></li>
+                        <li><a href="/privacy-policy" class="text-light">Privacy Policy</a></li>
+                        <li><a href="/terms-of-service" class="text-light">Terms of Service</a></li>
                     </ul>
                 </div>
                 <div class="col-md-4">
