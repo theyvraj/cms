@@ -67,6 +67,8 @@ def contact():
 
 @app.route('/admin')
 def admin():
+    if not session.get('logged_in'):
+        return redirect(url_for('login'))
     conn = get_db_connection()
     posts = conn.execute('SELECT * FROM posts').fetchall()
     conn.close()

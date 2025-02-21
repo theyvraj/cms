@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const navbarHtml = `
     <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
-            <a class="navbar-brand text-light" href="#">SlateCMS</a>
+            <a class="navbar-brand text-light" href="#">Core</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 </div>
                 <div class="col-md-4">
                     <h5>Contact Us</h5>
-                    <p>Email: slatecms@gmail.com</p>
+                    <p>Email: Core@gmail.com</p>
                     <p>Phone: +91 9232311212</p>
                     <p>Address: 82, Mansarovar, Jaipur, Rajasthan</p>
                 </div>
@@ -58,7 +58,7 @@ document.addEventListener('DOMContentLoaded', function() {
             <hr class="mt-4">
             <div class="row">
                 <div class="col-md-6">
-                    <p>&copy; 2025 SlateCMS. All rights reserved.</p>
+                    <p>&copy; 2025 Core. All rights reserved.</p>
                 </div>
                 <div class="col-md-6 text-md-end">
                     <a href="#" class="text-light me-3"><i class="fab fa-facebook-f"></i></a>
