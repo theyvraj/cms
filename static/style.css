@@ -289,3 +289,23 @@ button:hover {
         color: #f8f9fa !important;
     }
 }
+.carousel {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.carousel-inner {
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.carousel-item img {
+    height: 400px;
+    object-fit: cover;
+}
+
+@media (max-width: 768px) {
+    .carousel-item img {
+        height: 300px;
+    }
+}
