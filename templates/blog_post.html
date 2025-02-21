@@ -14,13 +14,13 @@
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
+            <div class="collapse navbar-collapse fw-bold" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
                         <a class="nav-link text-light" href="{{ url_for('homepage') }}">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-dark" href="{{ url_for('about') }}">About</a>
+                        <a class="nav-link text-light" href="{{ url_for('about') }}">About</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link text-light" href="{{ url_for('contact') }}">Contact Us</a>
@@ -35,13 +35,13 @@
     <div class="blog-post-container">
         <h1 class="blog-post-title">{{ post.title }}</h1>
         <p class="blog-post-meta">By <span class="blog-post-author">{{ post.author }}</span> on <span class="blog-post-date">{{ post.date }}</span></p>
-        <div class="blog-post-content">
+        <div class="blog-post-content text-light ">
             {{ post.content }}
         </div>
         <a href="{{ url_for('blogs') }}"><button>Back to Blogs</button></a>
     </div>
     <footer class="py-3 mt-5">
-        <div class="container text-center">
+        <div class="container text-light text-center">
             <p>&copy; 2025 Blicky. All rights reserved.</p>
         </div>
     </footer>
