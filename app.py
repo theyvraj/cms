@@ -36,8 +36,6 @@ def signup():
         username = request.form['username']
         password = request.form['password']
         secret_key = request.form['secret_key']
-        SECRET_SIGNUP_KEY = 'PKQSTecJAHRFI76aEHgtp6ukwP5T7Xj8'
-        if secret_key == SECRET_SIGNUP_KEY:
         signup_key = 'PKQSTecJAHRFI76aEHgtp6ukwP5T7Xj8'
         if secret_key == signup_key:
             conn = get_db_connection()
