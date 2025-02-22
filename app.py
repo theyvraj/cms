@@ -38,6 +38,8 @@ def signup():
         secret_key = request.form['secret_key']
         SECRET_SIGNUP_KEY = 'PKQSTecJAHRFI76aEHgtp6ukwP5T7Xj8'
         if secret_key == SECRET_SIGNUP_KEY:
+        signup_key = 'PKQSTecJAHRFI76aEHgtp6ukwP5T7Xj8'
+        if secret_key == signup_key:
             conn = get_db_connection()
             try:
                 conn.execute('INSERT INTO users (username, password) VALUES (?, ?)', (username, password))
@@ -199,4 +201,4 @@ def terms_of_service():
     return render_template('terms_of_service.html')
 
 if __name__ == '__main__':
-    app.run(host='192.168.211.5',debug=True)
+    app.run(debug=True)
