@@ -23,7 +23,7 @@ if not is_database_initialized():
     except subprocess.CalledProcessError:
         print("Error initializing database.")
 else:
-    print("Database already initialized.")
+    print("Database is already initialized.")
 def get_db_connection():
     conn = sqlite3.connect('blog.db')
     conn.row_factory = sqlite3.Row
