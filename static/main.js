@@ -1,33 +1,4 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Navbar HTML
-    const navbarHtml = `
-    <nav class="navbar navbar-expand-lg">
-        <div class="container-fluid">
-            <a class="navbar-brand text-light" href="#">Core</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse fw-bold" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link text-dark" href="/">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-light" href="/about">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-light" href="/contact">Contact Us</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-light" href="/blogs">Blogs</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-    `;
-
-    // Footer HTML
     const footerHtml = `
     <footer class="text-light py-4 mt-5">
         <div class="container">
@@ -70,6 +41,5 @@ document.addEventListener('DOMContentLoaded', function() {
         </div>
     </footer>
     `;
-    document.body.insertAdjacentHTML('afterbegin', navbarHtml);
     document.body.insertAdjacentHTML('beforeend', footerHtml);
 });

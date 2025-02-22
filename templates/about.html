@@ -10,6 +10,30 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand text-light" href="#">Core</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse fw-bold" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="/">Home</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link text-dark" href="/about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="/contact">Contact Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="/blogs">Blogs</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
     <div class="container mt-5 p-5 text-light bg-dark bg-gradient border border rounded">
         <h1><u>About Core</u></h1>
         <p style="text-align:justify;">Welcome to Core, the ultimate content management solution designed to streamline your workflow and enhance efficiency. Built for developers, content creators, and businesses, Core empowers users to manage and publish content seamlessly—directly from the back-end.
