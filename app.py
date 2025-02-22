@@ -165,8 +165,6 @@ def delete_posts():
         conn.executemany('DELETE FROM posts WHERE post_id = ?', [(post_id,) for post_id in post_ids])
         conn.commit()
         conn.close()
-        flash('Selected posts have been deleted.')
-
     return redirect(url_for('admin'))
 
 @app.route('/logout')
