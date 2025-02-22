@@ -130,7 +130,7 @@ def login():
             session['logged_in'] = True
             return redirect(url_for('admin'))
         else:
-            flash('Invalid credentials')
+            flash('Invalid credentials. Please try again.')
 
     return render_template('login.html')
 
